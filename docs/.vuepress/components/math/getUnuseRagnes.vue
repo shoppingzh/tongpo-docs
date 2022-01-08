@@ -77,8 +77,8 @@ function isDigit(val) {
 
 export default {
   setup() {
-    const min = ref(null)
-    const max = ref(null)
+    const min = ref(1)
+    const max = ref(10)
     const usedRanges = ref([])
     const canAdd = computed(() => {
       const last = usedRanges.value[usedRanges.value.length - 1]
@@ -86,8 +86,8 @@ export default {
     })
     const unuseRanges = ref([])
 
-    const addUsedRange = () => {
-      usedRanges.value.push({ from: null, to: null })
+    const addUsedRange = (from, to) => {
+      usedRanges.value.push({ from, to })
     }
 
     const removeUsedRange = (index) => {
@@ -98,7 +98,7 @@ export default {
       unuseRanges.value = getUnuseRagnes(min.value, max.value, [...usedRanges.value])
     }
 
-    addUsedRange()
+    addUsedRange(4, 6)
 
     return {
       min,
