@@ -27,6 +27,10 @@ parseQueryParams({
 // => keyword=123&from=2021-10-03
 ```
 
+<example>
+  <url-parseQueryParams />
+</example>
+
 ## 拼接路径
 
 ```
@@ -51,3 +55,7 @@ join('/a/', '/b', '////c')
 join('/a/', null, '/b/', '/c/')
 // => /a/b/c/
 ```
+
+<example>
+  <url-join />
+</example>
