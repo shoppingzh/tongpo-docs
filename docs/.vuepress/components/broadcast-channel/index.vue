@@ -1,7 +1,9 @@
 <template>
   <div>
     <div v-if="!isNewTab">
-      <a-button type="link" @click="openNewTab">打开一个新的页面</a-button>
+      <p>
+        <a-button type="link" @click="openNewTab">打开一个新的页面</a-button>
+      </p>
       <a-input v-model="message" type="textarea" :auto-size="{ minRows: 5 }" />
       <div style="margin-top: 10px;">
         <a-button type="primary" @click="send">发送</a-button>
@@ -9,7 +11,9 @@
     </div>
     <div v-else>
       <p>{{ message ? '接收到消息：' : '等待接收消息：' }}</p>
-      {{ message }}
+      <div>
+        {{ message }}
+      </div>
     </div>
   </div>
 </template>
