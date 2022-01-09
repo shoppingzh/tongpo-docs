@@ -6,6 +6,10 @@ author: xpzheng
 
 ## 选择文件
 
+<example>
+  <dom-chooseFile />
+</example>
+
 ```js
 chooseFile()
 ```
@@ -26,12 +30,13 @@ chooseFile().then(files => {
 })
 ```
 
-<example>
-  <dom-chooseFile />
-</example>
 
 
 ## 转换CSS像素
+
+<example>
+  <dom-parseCssPixel />
+</example>
 
 将诸如`100`、`'100px'`、`'100'`的值转换为CSS显示的像素值`'100px'`
 
@@ -61,11 +66,12 @@ parseCssPixel('100px')
 // => 100px
 ```
 
-<example>
-  <dom-parseCssPixel />
-</example>
 
 ## 动态创建/更新样式表
+
+<example>
+  <dom-createOrUpdateStylesheet />
+</example>
 
 ```js
 createOrUpdateStylesheet(id, cssText)
@@ -91,12 +97,13 @@ const style = `
 createOrUpdateStylesheet('custom-style', style)
 ```
 
-<example>
-  <dom-createOrUpdateStylesheet />
-</example>
 
 
 ## 动态加载图片
+
+<example>
+  <dom-loadImage />
+</example>
 
 ```js
 loadImage(url)
@@ -120,7 +127,12 @@ loadImage('./1.png').then(img => {
 })
 ```
 
+
 ## 设置页面标题
+
+<example>
+  <dom-setPageTitle />
+</example>
 
 ```js
 setPageTitle(title)
@@ -140,7 +152,12 @@ setPageTitle(title)
 setPageTitle('乐天工具库')
 ```
 
+
 ## 事件委托
+
+<example>
+  <dom-on />
+</example>
 
 ```js
 on(el, eventName, selector, fn)
@@ -164,6 +181,8 @@ on(el, 'click', '.btn', e => {
   console.log('el下的.btn被点击了')
 })
 ```
+
+
 
 ## 设置样式
 
@@ -192,6 +211,11 @@ css(el, {
 
 ## 检测页面可见性
 
+<example>
+  <dom-onVisibilityChange />
+</example>
+
+
 ```js
 onVisibilityChange(cb)
 ```
@@ -216,7 +240,12 @@ const destroy = onVisibilityChange(visible => {
 destroy()
 ```
 
+
 ## 检测页面操作
+
+<example>
+  <dom-detectAction />
+</example>
 
 ```js
 detectAction(actionCallback, unactionCallback, delay)
@@ -244,3 +273,4 @@ const destroy = detectAction(() => {
 // 在适当时间回收资源
 destroy()
 ```
+

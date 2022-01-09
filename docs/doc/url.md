@@ -5,6 +5,10 @@ author: xpzheng
 
 ## 解析查询参数
 
+<example>
+  <url-parseQueryParams />
+</example>
+
 ```js
 parseQueryParams(params)
 ```
@@ -27,11 +31,12 @@ parseQueryParams({
 // => keyword=123&from=2021-10-03
 ```
 
-<example>
-  <url-parseQueryParams />
-</example>
 
 ## 拼接路径
+
+<example>
+  <url-join />
+</example>
 
 ```
 join()
@@ -56,6 +61,3 @@ join('/a/', null, '/b/', '/c/')
 // => /a/b/c/
 ```
 
-<example>
-  <url-join />
-</example>

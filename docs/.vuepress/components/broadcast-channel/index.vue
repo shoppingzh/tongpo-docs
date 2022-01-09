@@ -20,13 +20,13 @@
 
 <script>
 import BroadcastChannel from 'tongpo/lib/broadcast-channel'
-import { ref } from '@vue/composition-api'
+import { onMounted, ref } from '@vue/composition-api'
 
 export default {
   setup(props, ctx) {
-    const isNewTab = !!window.opener
-    const channel = new BroadcastChannel('test')
+    const isNewTab = ref(false)
     const message = ref('')
+    let channel = null
 
     const openNewTab = () => {
       window.open(location.href)
@@ -35,13 +35,16 @@ export default {
       channel.postMessage(message.value)
     }
 
-    if (isNewTab) {
-      channel.onMessage(msg => {
-        message.value = msg.data
-      })
-    } else {
+    onMounted(() => {
+      channel = new BroadcastChannel('test')
+      isNewTab.value = !!window.opener
+      if (isNewTab.value) {
+        channel.onMessage(msg => {
+          message.value = msg.data
+        })
+      }
+    })
 
-    }
     return {
       isNewTab,
       message,
