@@ -21,7 +21,7 @@
     "@vue/composition-api": "^1.4.3",
     "ant-design-vue": "^1.7.8",
     "core-js": "2.6.12",
-    "tongpo": "^0.0.14",
+    "tongpo": "0.0.15",
     "vuepress-theme-reco": "1.5.7"
   }
 }

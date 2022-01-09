@@ -21,6 +21,7 @@ export default {
     background-color: #fff;
     box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.1);
     transition: all .2s ease-in-out;
+    overflow: hidden;
     &:hover {
       box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.1), 5px 5px 25px rgba(0, 0, 0, .15);
     }

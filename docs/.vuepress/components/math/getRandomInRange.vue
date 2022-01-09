@@ -21,7 +21,7 @@
         type="primary"
         @click="calc">计算随机值</a-button>
     </p>
-    <a-alert type="success" :message="value"></a-alert>
+    <a-alert v-if="value" type="success" :message="value"></a-alert>
   </div>
 </template>
 

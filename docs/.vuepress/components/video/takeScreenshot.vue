@@ -3,7 +3,7 @@
     <p>
       <video
         ref="video"
-        src="./1.mp4"
+        src="./flower.webm"
         controls />
     </p>
     <p>
@@ -20,6 +20,7 @@
 <script>
 import { ref } from '@vue/composition-api'
 import { takeScreenshot } from 'tongpo/lib/video'
+import { Modal } from 'ant-design-vue'
 
 export default {
   setup() {
@@ -33,6 +34,9 @@ export default {
         image.value = URL.createObjectURL(blob)
       } catch (err) {
         console.error(err)
+        Modal.error({
+          content: err
+        })
       }
     }
     return {
