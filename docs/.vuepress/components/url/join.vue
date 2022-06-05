@@ -15,7 +15,7 @@ import { join } from 'tongpo/lib/url'
 
 export default {
   setup(props, ctx) {
-    const value = ref('')
+    const value = ref('a/ /b c// ///ddd eee')
     const convertValue = computed(() => join(...value.value.split(/\s+/)))
     return {
       value,

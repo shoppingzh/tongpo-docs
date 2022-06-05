@@ -61,3 +61,31 @@ join('/a/', null, '/b/', '/c/')
 // => /a/b/c/
 ```
 
+## 解析URL
+
+<example>
+  <url-parse />
+</example>
+
+```ts
+parse('https://www.google.com:80/a/b/c?name=xpzheng&age=20#hello')
+```
+
+**参数**
+
+1. url(String): URL
+
+**返回值**
+
+(URLParts): 解析结果
+
+```ts
+type URLParts {
+  protocol: string,
+  host: string,
+  port: string,
+  pathname: string,
+  query: string,
+  hash: string
+}
+```
